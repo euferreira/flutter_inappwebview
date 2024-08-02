@@ -14,7 +14,7 @@
      public *;
      private *;
 }
-- keep class com.pichillilorenzo.flutter_inappwebview_android.** { *; }
-- dontwarn android.window.BackEvent
-- keep class android.window.BackEvent { *; }
-- keep class io.flutter.embedding { *; }
+-keep class com.pichillilorenzo.flutter_inappwebview_android.** { *; }
+-dontwarn android.window.BackEvent
+-keep class android.window.BackEvent { *; }
+-keep class io.flutter.embedding { *; }
