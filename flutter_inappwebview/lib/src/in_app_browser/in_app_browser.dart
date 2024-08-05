@@ -63,24 +63,20 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
     if (pullToRefreshControllerPlatform == null) {
       return null;
     }
-    return PullToRefreshController.fromPlatform(
-        platform: pullToRefreshControllerPlatform);
+    return PullToRefreshController.fromPlatform(platform: pullToRefreshControllerPlatform);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.findInteractionController}
   FindInteractionController? get findInteractionController {
-    final findInteractionControllerPlatform =
-        platform.findInteractionController;
+    final findInteractionControllerPlatform = platform.findInteractionController;
     if (findInteractionControllerPlatform == null) {
       return null;
     }
-    return FindInteractionController.fromPlatform(
-        platform: findInteractionControllerPlatform);
+    return FindInteractionController.fromPlatform(platform: findInteractionControllerPlatform);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.initialUserScripts}
-  UnmodifiableListView<UserScript>? get initialUserScripts =>
-      platform.initialUserScripts;
+  UnmodifiableListView<UserScript>? get initialUserScripts => platform.initialUserScripts;
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.windowId}
   int? get windowId => platform.windowId;
@@ -91,8 +87,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
     if (webViewControllerPlatform == null) {
       return null;
     }
-    return InAppWebViewController.fromPlatform(
-        platform: webViewControllerPlatform);
+    return InAppWebViewController.fromPlatform(platform: webViewControllerPlatform);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.openUrlRequest}
@@ -101,8 +96,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
       @Deprecated('Use settings instead') InAppBrowserClassOptions? options,
       InAppBrowserClassSettings? settings}) {
     this.platform.eventHandler = this;
-    return platform.openUrlRequest(
-        urlRequest: urlRequest, options: options, settings: settings);
+    return platform.openUrlRequest(urlRequest: urlRequest, options: options, settings: settings);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.openFile}
@@ -111,8 +105,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
       @Deprecated('Use settings instead') InAppBrowserClassOptions? options,
       InAppBrowserClassSettings? settings}) {
     this.platform.eventHandler = this;
-    return platform.openFile(
-        assetFilePath: assetFilePath, options: options, settings: settings);
+    return platform.openFile(assetFilePath: assetFilePath, options: options, settings: settings);
   }
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.openData}
@@ -142,27 +135,22 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
       PlatformInAppBrowser.static().openWithSystemBrowser(url: url);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.addMenuItem}
-  void addMenuItem(InAppBrowserMenuItem menuItem) =>
-      platform.addMenuItem(menuItem);
+  void addMenuItem(InAppBrowserMenuItem menuItem) => platform.addMenuItem(menuItem);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.addMenuItems}
-  void addMenuItems(List<InAppBrowserMenuItem> menuItems) =>
-      platform.addMenuItems(menuItems);
+  void addMenuItems(List<InAppBrowserMenuItem> menuItems) => platform.addMenuItems(menuItems);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.removeMenuItem}
-  bool removeMenuItem(InAppBrowserMenuItem menuItem) =>
-      platform.removeMenuItem(menuItem);
+  bool removeMenuItem(InAppBrowserMenuItem menuItem) => platform.removeMenuItem(menuItem);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.removeMenuItems}
-  void removeMenuItems(List<InAppBrowserMenuItem> menuItems) =>
-      platform.removeMenuItems(menuItems);
+  void removeMenuItems(List<InAppBrowserMenuItem> menuItems) => platform.removeMenuItems(menuItems);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.removeAllMenuItem}
   void removeAllMenuItem() => platform.removeAllMenuItem();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.hasMenuItem}
-  bool hasMenuItem(InAppBrowserMenuItem menuItem) =>
-      platform.hasMenuItem(menuItem);
+  bool hasMenuItem(InAppBrowserMenuItem menuItem) => platform.hasMenuItem(menuItem);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.show}
   Future<void> show() => platform.show();
@@ -178,16 +166,14 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.setOptions}
   @Deprecated('Use setSettings instead')
-  Future<void> setOptions({required InAppBrowserClassOptions options}) =>
-      platform.setOptions(options: options);
+  Future<void> setOptions({required InAppBrowserClassOptions options}) => platform.setOptions(options: options);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.getOptions}
   @Deprecated('Use getSettings instead')
   Future<InAppBrowserClassOptions?> getOptions() => platform.getOptions();
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.setSettings}
-  Future<void> setSettings({required InAppBrowserClassSettings settings}) =>
-      platform.setSettings(settings: settings);
+  Future<void> setSettings({required InAppBrowserClassSettings settings}) => platform.setSettings(settings: settings);
 
   ///{@macro flutter_inappwebview_platform_interface.PlatformInAppBrowser.getSettings}
   Future<InAppBrowserClassSettings?> getSettings() => platform.getSettings();
@@ -208,20 +194,17 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void androidOnGeolocationPermissionsHidePrompt() {}
 
   @override
-  Future<GeolocationPermissionShowPromptResponse?>?
-      androidOnGeolocationPermissionsShowPrompt(String origin) {
+  Future<GeolocationPermissionShowPromptResponse?>? androidOnGeolocationPermissionsShowPrompt(String origin) {
     return null;
   }
 
   @override
-  Future<JsBeforeUnloadResponse?>? androidOnJsBeforeUnload(
-      JsBeforeUnloadRequest jsBeforeUnloadRequest) {
+  Future<JsBeforeUnloadResponse?>? androidOnJsBeforeUnload(JsBeforeUnloadRequest jsBeforeUnloadRequest) {
     return null;
   }
 
   @override
-  Future<PermissionRequestResponse?>? androidOnPermissionRequest(
-      String origin, List<String> resources) {
+  Future<PermissionRequestResponse?>? androidOnPermissionRequest(String origin, List<String> resources) {
     return null;
   }
 
@@ -238,20 +221,17 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void androidOnRenderProcessGone(RenderProcessGoneDetail detail) {}
 
   @override
-  Future<WebViewRenderProcessAction?>? androidOnRenderProcessResponsive(
-      Uri? url) {
+  Future<WebViewRenderProcessAction?>? androidOnRenderProcessResponsive(Uri? url) {
     return null;
   }
 
   @override
-  Future<WebViewRenderProcessAction?>? androidOnRenderProcessUnresponsive(
-      Uri? url) {
+  Future<WebViewRenderProcessAction?>? androidOnRenderProcessUnresponsive(Uri? url) {
     return null;
   }
 
   @override
-  Future<SafeBrowsingResponse?>? androidOnSafeBrowsingHit(
-      Uri url, SafeBrowsingThreat? threatType) {
+  Future<SafeBrowsingResponse?>? androidOnSafeBrowsingHit(Uri url, SafeBrowsingThreat? threatType) {
     return null;
   }
 
@@ -259,8 +239,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void androidOnScaleChanged(double oldScale, double newScale) {}
 
   @override
-  Future<WebResourceResponse?>? androidShouldInterceptRequest(
-      WebResourceRequest request) {
+  Future<WebResourceResponse?>? androidShouldInterceptRequest(WebResourceRequest request) {
     return null;
   }
 
@@ -268,8 +247,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void iosOnDidReceiveServerRedirectForProvisionalNavigation() {}
 
   @override
-  Future<IOSNavigationResponseAction?>? iosOnNavigationResponse(
-      IOSWKNavigationResponse navigationResponse) {
+  Future<IOSNavigationResponseAction?>? iosOnNavigationResponse(IOSWKNavigationResponse navigationResponse) {
     return null;
   }
 
@@ -277,8 +255,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void iosOnWebContentProcessDidTerminate() {}
 
   @override
-  Future<IOSShouldAllowDeprecatedTLSAction?>? iosShouldAllowDeprecatedTLS(
-      URLAuthenticationChallenge challenge) {
+  Future<IOSShouldAllowDeprecatedTLSAction?>? iosShouldAllowDeprecatedTLS(URLAuthenticationChallenge challenge) {
     return null;
   }
 
@@ -296,8 +273,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onBrowserCreated() {}
 
   @override
-  void onCameraCaptureStateChanged(
-      MediaCaptureState? oldState, MediaCaptureState? newState) {}
+  void onCameraCaptureStateChanged(MediaCaptureState? oldState, MediaCaptureState? newState) {}
 
   @override
   void onCloseWindow() {}
@@ -332,8 +308,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onExitFullscreen() {}
 
   @override
-  void onFindResultReceived(
-      int activeMatchOrdinal, int numberOfMatches, bool isDoneCounting) {}
+  void onFindResultReceived(int activeMatchOrdinal, int numberOfMatches, bool isDoneCounting) {}
 
   @override
   Future<FormResubmissionAction?>? onFormResubmission(WebUri? url) {
@@ -344,8 +319,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onGeolocationPermissionsHidePrompt() {}
 
   @override
-  Future<GeolocationPermissionShowPromptResponse?>?
-      onGeolocationPermissionsShowPrompt(String origin) {
+  Future<GeolocationPermissionShowPromptResponse?>? onGeolocationPermissionsShowPrompt(String origin) {
     return null;
   }
 
@@ -355,8 +329,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   }
 
   @override
-  Future<JsBeforeUnloadResponse?>? onJsBeforeUnload(
-      JsBeforeUnloadRequest jsBeforeUnloadRequest) {
+  Future<JsBeforeUnloadResponse?>? onJsBeforeUnload(JsBeforeUnloadRequest jsBeforeUnloadRequest) {
     return null;
   }
 
@@ -385,8 +358,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   }
 
   @override
-  Future<CustomSchemeResponse?>? onLoadResourceWithCustomScheme(
-      WebResourceRequest request) {
+  Future<CustomSchemeResponse?>? onLoadResourceWithCustomScheme(WebResourceRequest request) {
     return null;
   }
 
@@ -400,12 +372,10 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onLongPressHitTestResult(InAppWebViewHitTestResult hitTestResult) {}
 
   @override
-  void onMicrophoneCaptureStateChanged(
-      MediaCaptureState? oldState, MediaCaptureState? newState) {}
+  void onMicrophoneCaptureStateChanged(MediaCaptureState? oldState, MediaCaptureState? newState) {}
 
   @override
-  Future<NavigationResponseAction?>? onNavigationResponse(
-      NavigationResponse navigationResponse) {
+  Future<NavigationResponseAction?>? onNavigationResponse(NavigationResponse navigationResponse) {
     return null;
   }
 
@@ -416,8 +386,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onPageCommitVisible(WebUri? url) {}
 
   @override
-  Future<PermissionResponse?>? onPermissionRequest(
-      PermissionRequest permissionRequest) {
+  Future<PermissionResponse?>? onPermissionRequest(PermissionRequest permissionRequest) {
     return null;
   }
 
@@ -428,8 +397,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onPrint(Uri? url) {}
 
   @override
-  Future<bool?>? onPrintRequest(
-      WebUri? url, PlatformPrintJobController? printJobController) {
+  Future<bool?>? onPrintRequest(WebUri? url, PlatformPrintJobController? printJobController) {
     return null;
   }
 
@@ -437,8 +405,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onProgressChanged(int progress) {}
 
   @override
-  Future<ClientCertResponse?>? onReceivedClientCertRequest(
-      URLAuthenticationChallenge challenge) {
+  Future<ClientCertResponse?>? onReceivedClientCertRequest(URLAuthenticationChallenge challenge) {
     return null;
   }
 
@@ -446,14 +413,12 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onReceivedError(WebResourceRequest request, WebResourceError error) {}
 
   @override
-  Future<HttpAuthResponse?>? onReceivedHttpAuthRequest(
-      URLAuthenticationChallenge challenge) {
+  Future<HttpAuthResponse?>? onReceivedHttpAuthRequest(URLAuthenticationChallenge challenge) {
     return null;
   }
 
   @override
-  void onReceivedHttpError(
-      WebResourceRequest request, WebResourceResponse errorResponse) {}
+  void onReceivedHttpError(WebResourceRequest request, WebResourceResponse errorResponse) {}
 
   @override
   void onReceivedIcon(Uint8List icon) {}
@@ -462,8 +427,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onReceivedLoginRequest(LoginRequest loginRequest) {}
 
   @override
-  Future<ServerTrustAuthResponse?>? onReceivedServerTrustAuthRequest(
-      URLAuthenticationChallenge challenge) {
+  Future<ServerTrustAuthResponse?>? onReceivedServerTrustAuthRequest(URLAuthenticationChallenge challenge) {
     return null;
   }
 
@@ -479,8 +443,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   }
 
   @override
-  Future<WebViewRenderProcessAction?>? onRenderProcessUnresponsive(
-      WebUri? url) {
+  Future<WebViewRenderProcessAction?>? onRenderProcessUnresponsive(WebUri? url) {
     return null;
   }
 
@@ -488,8 +451,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onRequestFocus() {}
 
   @override
-  Future<SafeBrowsingResponse?>? onSafeBrowsingHit(
-      WebUri url, SafeBrowsingThreat? threatType) {
+  Future<SafeBrowsingResponse?>? onSafeBrowsingHit(WebUri url, SafeBrowsingThreat? threatType) {
     return null;
   }
 
@@ -515,8 +477,7 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   void onZoomScaleChanged(double oldScale, double newScale) {}
 
   @override
-  Future<ShouldAllowDeprecatedTLSAction?>? shouldAllowDeprecatedTLS(
-      URLAuthenticationChallenge challenge) {
+  Future<ShouldAllowDeprecatedTLSAction?>? shouldAllowDeprecatedTLS(URLAuthenticationChallenge challenge) {
     return null;
   }
 
@@ -526,20 +487,17 @@ class InAppBrowser implements PlatformInAppBrowserEvents {
   }
 
   @override
-  Future<FetchRequest?>? shouldInterceptFetchRequest(
-      FetchRequest fetchRequest) {
+  Future<FetchRequest?>? shouldInterceptFetchRequest(FetchRequest fetchRequest) {
     return null;
   }
 
   @override
-  Future<WebResourceResponse?>? shouldInterceptRequest(
-      WebResourceRequest request) {
+  Future<WebResourceResponse?>? shouldInterceptRequest(WebResourceRequest request) {
     return null;
   }
 
   @override
-  Future<NavigationActionPolicy?>? shouldOverrideUrlLoading(
-      NavigationAction navigationAction) {
+  Future<NavigationActionPolicy?>? shouldOverrideUrlLoading(NavigationAction navigationAction) {
     return null;
   }
 
